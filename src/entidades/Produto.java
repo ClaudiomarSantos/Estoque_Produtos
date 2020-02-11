@@ -4,6 +4,14 @@ public class Produto {
 	public String nome;
 	public double preço;
 	public int quantidade;
+	
+	
+
+	public Produto(String nome, double preço, int quantidade) {
+		this.nome = nome;
+		this.preço = preço;
+		this.quantidade = quantidade;
+	}
 
 	public double ValorEmEstoque() {
 		return preço * quantidade;
@@ -29,4 +37,5 @@ public class Produto {
 				+ String.format("%.2f%n", ValorEmEstoque());
 	}
 
+	
 }
