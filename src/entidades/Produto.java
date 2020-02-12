@@ -1,11 +1,9 @@
 package entidades;
 
 public class Produto {
-	public String nome;
-	public double preço;
-	public int quantidade;
-	
-	
+	private String nome;
+	private double preço;
+	private int quantidade;
 
 	public Produto(String nome, double preço, int quantidade) {
 		this.nome = nome;
@@ -28,14 +26,28 @@ public class Produto {
 	}
 
 	public String toString() {
-		return 	
-				nome 
-				+ ", $ " 
-				+ String.format("%.2f%n", preço) 
-				+ quantidade
-				+ ", "
+		return nome + ", $ " + String.format("%.2f%n", preço) + quantidade + ", "
 				+ String.format("%.2f%n", ValorEmEstoque());
 	}
 
-	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getPreço() {
+		return preço;
+	}
+
+	public void setPreço(double preço) {
+		this.preço = preço;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
 }
